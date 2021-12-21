@@ -4,20 +4,21 @@
 		"body": "const fetch$1 = async (resource) => {try {const { data } = await axios.get(resource); console.log(data)} catch (err) {console.error(err);}};",
 		"description": "Fetch data with Axios"
 	},
+	
 	"React Component": {
 		"prefix": "rc",
 		"body": [
 			"import React, { useEffect } from \"react\"",
 			"",
-			"const ${1:ComponentName} = () => {",
+			"const ${1:$TM_FILENAME_BASE} = () => {",
 			"  return (",
 			"    <div>",
-			"      <h1>$2</h1>",
+			"      <h1>$1</h1>",
 			"    </div>",
 			"  )",
 			"}",
 			"",
-			"export default ${1:ComponentName}"
+			"export default $1"
 		],
 		"description": "React Component"
 	},
@@ -55,6 +56,9 @@
 			"const [${2:state}, ${3:dispatch}] = useImmerReducer(reducer, $1)"
 		],
 		"description": "useImmerReducer"
+		
 	}
+	
+
 	
 }
