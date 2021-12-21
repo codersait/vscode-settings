@@ -1,0 +1,60 @@
+{
+	"Fetch Data":{
+		"prefix": "fd",
+		"body": "const fetch$1 = async (resource) => {try {const { data } = await axios.get(resource); console.log(data)} catch (err) {console.error(err);}};",
+		"description": "Fetch data with Axios"
+	},
+	"React Component": {
+		"prefix": "rc",
+		"body": [
+			"import React, { useEffect } from \"react\"",
+			"",
+			"const ${1:ComponentName} = () => {",
+			"  return (",
+			"    <div>",
+			"      <h1>$2</h1>",
+			"    </div>",
+			"  )",
+			"}",
+			"",
+			"export default ${1:ComponentName}"
+		],
+		"description": "React Component"
+	},
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"  $2",
+			"}, [$1])"
+		],
+		"description": "useEffect"
+	},
+	"useState": {
+		"prefix": "us",
+		"body": [
+			"const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2)"
+		],
+		"description": "useState"
+	},
+	"useImmerReducer": {
+		"prefix": "uir",
+		"body": [
+			"const ${1:initialState} = {",
+			"",
+			"}",
+			"",
+			"function reducer(draft, action) {",
+			"  switch (action.type) {",
+			"    case \"${4:NameMe}\":",
+			"      // Do something here",
+			"      return",
+			"  }",
+			"}",
+			"",
+			"const [${2:state}, ${3:dispatch}] = useImmerReducer(reducer, $1)"
+		],
+		"description": "useImmerReducer"
+	}
+	
+}
